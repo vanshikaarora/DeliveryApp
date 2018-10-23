@@ -23,6 +23,13 @@
             android:text="cust_address"
             app:layout_constraintTop_toBottomOf="@+id/customerName"
             />
+            <TextView
+                android:id="@+id/customerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="cust_address"
+                app:layout_constraintTop_toBottomOf="@+id/customerName"
+                />
 
         <android.support.v7.widget.RecyclerView
         android:id="@+id/shopNameRecycler"
