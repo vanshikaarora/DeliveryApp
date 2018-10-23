@@ -41,6 +41,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         orderViewHolder.button.setText("Take Order");
         orderViewHolder.customerName.setText(order.getName());
         orderViewHolder.customerAddress.setText(order.getAddress());
+        orderViewHolder.customerPhone.setText(order.getPhone());
         ShopsAdapter adapter=new ShopsAdapter(context,order.getShopList());
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false);
         orderViewHolder.recyclerView.setAdapter(adapter);
@@ -71,7 +72,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
     public class OrderViewHolder extends RecyclerView.ViewHolder{
         RecyclerView recyclerView;
-        TextView button,customerName,customerAddress;
+        TextView button,customerName,customerAddress,customerPhone;
         CardView cardView;
 
         public OrderViewHolder(@NonNull View itemView) {
@@ -79,6 +80,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
             recyclerView=itemView.findViewById(R.id.shopNameRecycler);
             button=itemView.findViewById(R.id.takeOrder);
             cardView=itemView.findViewById(R.id.ordersCard);
+            customerPhone=itemView.findViewById(R.id.customerPhone);
             customerAddress=itemView.findViewById(R.id.customerAddress);
             customerName=itemView.findViewById(R.id.customerName);
             itemView.setOnClickListener(new View.OnClickListener() {
